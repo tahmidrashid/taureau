@@ -1,4 +1,5 @@
 #Taureau: A Stock Market Movement Inference Framework Based on Twitter Sentiment Analysis
+
 Joshua Johnson, Nick Milikich, & Md Tahmid Rashid
 
 CSE 60437 Social Sensing & Cyber-Physical Systems
