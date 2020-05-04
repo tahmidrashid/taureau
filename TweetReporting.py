@@ -150,7 +150,7 @@ def get_output(company, dates, num_tweets):
 
 	for date in dates:
 		
-		filename = "Tahmid/Tesla/" + company + "-" + str(date[0].year) + "-" + str(date[0].month) + "-" + str(date[0].day) + ".csv"
+		filename = "Tesla_csv/" + company + "-" + str(date[0].year) + "-" + str(date[0].month) + "-" + str(date[0].day) + ".json"
 		tweets = read_tweets(filename)
 
 		tweets_text = []
