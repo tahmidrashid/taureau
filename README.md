@@ -1,6 +1,3 @@
-# Taureau
-A Stock Market Movement Inference Framework Based on Twitter Sentiment Analysis
-
 Taureau: A Stock Market Movement Inference Framework Based on Twitter Sentiment Analysis
 Joshua Johnson, Nick Milikich, & Md Tahmid Rashid
 CSE 60437 Social Sensing & Cyber-Physical Systems
@@ -15,8 +12,8 @@ The Taureau framework consists of four parts:
 - Tweet reporting: Using the predictions from stock movement analysis, any dates with large predicted movements (by default >0.1, but can be changed) are identified, the tweets about that company from those days analyzed, and the 15 (again, by default, but can be changed) most-repeated tweets reported, to give an idea of topics of conversation from that day that might have generated that extreme prediction.
 
 To run the analysis done in our project (for Tesla for the period of March-April 2020), follow the instructions for each task:
-- Tweet collection: Run GetTweets.py using four command line arguments specifying the beginning and end dates to be collected, inclusive, in the form of beginning month/date, end month/date. For example, to collect from March 6 to March 11, 2020, one would execute the code 'python3 GetTweets.py 3 6 3 11'.
-- Sentiment analysis: [] The printed scores can be collected in an excel file SentimentScoresAverage.xlsx (included in this submission).
+- Tweet collection: Be sure that Keys.dat (included in this submission) is included in the same directory (can be edited for a different Twitter API credentials). Run GetTweets.py using four command line arguments specifying the beginning and end dates to be collected, inclusive, in the form of beginning month/date, end month/date. For example, to collect from March 6 to March 11, 2020, one would execute 'python3 GetTweets.py 3 6 3 11'.
+- Sentiment analysis: Be sure that the steps for tweet collection have been followed and that the tweet json files are organized as desired. Run GenerateSentiment.py, editing the appropriate 'inline' argument on line 21 to give the file name for the desired company and date. The printed scores can be collected in an excel file SentimentScoresAverage.xlsx (included in this submission).
 - Stock movement analysis: Be sure that the steps for sentiment analysis have been followed and that SentimentScoresAverage.xlsx is in the same directory. Run StockAnalysis.R; Tesla-predict.txt will be generated as a result.
 - Tweet reporting: Be sure that the steps for stock movement analysis have been followed and that Tesla-predict.txt is in the same directory. Run TweetReporting.py; command line arguments can be passed to this program, with the first a floating point number specifying the threshold for movement (ex. 0.1), and the second an integer specifying the number of tweets to be reported for each day (ex. 15). If either argument is not provided then the defaults will be used. SignificantEvents.txt will be generated as a result.
 
